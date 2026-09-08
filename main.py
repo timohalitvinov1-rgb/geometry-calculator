@@ -1,6 +1,18 @@
 def main():
-  print("Калькулятор геометрии")
-  print("В разработке")
-if _name_ == "_main_":
+  print("Выберите фигуру:")
+  print("1. Круг")
+  print("2. Прямоугольник")
+  choice = input("Введите номер: ")
+  if choice == "1":
+    r = float(input("Введите радиус: "))
+    shape = Circle(r)
+    print(f"Площадь круга: {shape.area():.2f}")
+  elif choice == "2":
+    w = float(input("Введите ширину: "))
+    h = float(input("Введите высоту: "))
+    shape = Rectangle(w, h)
+    print(f"Площадь прямоугольника: {shape.area():.2f}")
+  else:
+    print("Неверный выбор")
+if name == "main":
   main()
-#Add main.py stub 
